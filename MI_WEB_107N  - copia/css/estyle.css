@@ -1,0 +1,460 @@
+/* ============================================
+   ROOT ACADEMY — STYLESHEET
+   ============================================ */
+ 
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap");
+ 
+/* RESET & BASE */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* BODY */
+body {
+    background-image: url("../imagenes/nosotros/fondo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #070929; /* fallback si no carga la imagen */
+ 
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: white;
+ 
+    min-height: 100vh;
+}
+ 
+/* ============================================
+   HEADER / NAVBAR
+   ============================================ */
+.header__container {
+    width: 100%;
+    background: rgba(7, 9, 41, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+ 
+.header__container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+}
+ 
+/* LOGO */
+.header__container .navbar .logo img {
+    width: 70px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.header__container .navbar .logo img:hover {
+    opacity: 0.85;
+}
+ 
+/* MENÚ UL */
+.header__container .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+ 
+.header__container .navbar ul li a {
+    color: rgb(131, 199, 199);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    position: relative;
+    transition: color 0.2s, background 0.2s;
+    font-size: 0.95em;
+}
+ 
+.header__container .navbar ul li a:hover {
+    color: white;
+    background: rgba(73, 76, 125, 0.4);
+}
+ 
+/* Línea animada debajo del link */
+.header__container .navbar ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: rgb(131, 199, 199);
+    transition: width 0.3s;
+    border-radius: 2px;
+}
+.header__container .navbar ul li a:hover::after {
+    width: 80%;
+}
+ 
+/* BOTÓN NAVBAR */
+.header__container .navbar button {
+    cursor: pointer;
+    padding: 10px 22px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #494c7d;
+    border: 1px solid #101127;
+    border-radius: 4px;
+    transition: background 0.3s, border 0.3s;
+    font-size: 0.85em;
+    font-family: "Cal Sans", sans-serif;
+}
+.header__container .navbar button:hover {
+    background: rgb(11, 10, 46);
+    border: 1px solid #494c7d;
+}
+ 
+/* ============================================
+   MAIN CONTENT WRAPPER
+   ============================================ */
+.main__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+ 
+/* ============================================
+   HERO / BANNER
+   ============================================ */
+.hero {
+    text-align: center;
+    padding: 48px 24px 32px;
+}
+ 
+.hero h1 {
+    font-size: 2.4em;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 16px;
+}
+ 
+.hero img.banner {
+    width: 60%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    margin: 20px 0;
+}
+ 
+/* ============================================
+   TÍTULOS
+   ============================================ */
+h1 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+ 
+h2 {
+    color: rgb(232, 220, 205);
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0 12px;
+}
+ 
+h3 {
+    color: rgb(131, 199, 199);
+    margin: 12px 0 8px;
+}
+ 
+h5 {
+    color: aliceblue;
+    font-weight: 400;
+    text-align: center;
+    margin: 12px 0;
+}
+ 
+/* ============================================
+   PÁRRAFOS
+   ============================================ */
+p {
+    color: aliceblue;
+    line-height: 1.7;
+    text-align: center;
+}
+ 
+/* ============================================
+   HR / DIVISOR
+   ============================================ */
+hr {
+    border: none;
+    border-top: 1px solid rgba(131, 199, 199, 0.3);
+    margin: 24px 0;
+}
+ 
+/* ============================================
+   BOTONES GENERALES
+   ============================================ */
+button {
+    cursor: pointer;
+    padding: 10px 24px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #494c7d;
+    border: 1px solid #101127;
+    border-radius: 4px;
+    transition: background 0.3s, border 0.3s, transform 0.1s;
+    font-size: 0.9em;
+    font-family: "Cal Sans", sans-serif;
+    margin: 4px;
+}
+button:hover {
+    background: rgb(11, 10, 46);
+    border: 1px solid #494c7d;
+    transform: translateY(-1px);
+}
+button:active {
+    transform: translateY(0);
+}
+ 
+/* ============================================
+   ENLACES
+   ============================================ */
+a {
+    color: rgb(131, 199, 199);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+ 
+/* ============================================
+   TABLA NAVEGACIÓN (uso legado con <table>)
+   ============================================ */
+table.nav-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(7, 9, 41, 0.8);
+}
+table.nav-table td {
+    text-align: center;
+    padding: 10px 0;
+}
+table.nav-table td a {
+    color: rgb(131, 199, 199);
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+table.nav-table td a:hover {
+    background: rgba(73, 76, 125, 0.5);
+    color: white;
+    text-decoration: none;
+}
+ 
+/* ============================================
+   TABLA DE RECURSOS
+   ============================================ */
+table.recursos-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table.recursos-table td {
+    vertical-align: top;
+    padding: 24px 20px;
+    text-align: center;
+    border: 1px solid rgba(131, 199, 199, 0.25);
+    background: rgba(7, 9, 41, 0.6);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+table.recursos-table td:hover {
+    background: rgba(73, 76, 125, 0.35);
+}
+table.recursos-table img {
+    border-radius: 8px;
+    max-width: 100%;
+}
+table.recursos-table iframe {
+    border-radius: 8px;
+    max-width: 100%;
+}
+ 
+/* ============================================
+   FORMULARIO DE CONTACTO
+   ============================================ */
+.form__container {
+    max-width: 560px;
+    margin: 0 auto;
+    background: rgba(7, 9, 41, 0.7);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(131, 199, 199, 0.25);
+}
+ 
+.form__container label {
+    display: block;
+    color: rgb(131, 199, 199);
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 0.95em;
+}
+ 
+.form__container input[type="text"],
+.form__container input[type="email"],
+.form__container textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(131, 199, 199, 0.35);
+    border-radius: 6px;
+    color: white;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 0.95em;
+    margin-bottom: 18px;
+    transition: border 0.2s, background 0.2s;
+    resize: vertical;
+}
+.form__container input:focus,
+.form__container textarea:focus {
+    outline: none;
+    border-color: rgb(131, 199, 199);
+    background: rgba(255,255,255,0.12);
+}
+ 
+.form__container input[type="submit"] {
+    cursor: pointer;
+    padding: 12px 32px;
+    font-weight: 700;
+    color: aliceblue;
+    background: #494c7d;
+    border: 1px solid #101127;
+    border-radius: 4px;
+    transition: background 0.3s, border 0.3s, transform 0.1s;
+    font-size: 1em;
+    font-family: "Cal Sans", sans-serif;
+    width: 100%;
+}
+.form__container input[type="submit"]:hover {
+    background: rgb(11, 10, 46);
+    border-color: #494c7d;
+    transform: translateY(-1px);
+}
+ 
+/* ============================================
+   INFO DE CONTACTO
+   ============================================ */
+.contact__info {
+    max-width: 560px;
+    margin: 0 auto 32px;
+    background: rgba(7, 9, 41, 0.6);
+    padding: 24px 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(131, 199, 199, 0.2);
+    text-align: left;
+}
+.contact__info p {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+ 
+/* ============================================
+   FOOTER (opcional para futuro)
+   ============================================ */
+.footer {
+    text-align: center;
+    padding: 24px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85em;
+    border-top: 1px solid rgba(131,199,199,0.15);
+    margin-top: 40px;
+}
+ 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .header__container .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+    .header__container .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero img.banner {
+        width: 90%;
+    }
+    table.recursos-table {
+        display: block;
+    }
+    table.recursos-table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    table.recursos-table td {
+        margin-bottom: 16px;
+    }
+    .form__container {
+        padding: 20px;
+    }
+}
+/* ============================================
+   ANIMACIONES AL HACER SCROLL
+   ============================================ */
+.anim {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.anim.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   BOTÓN VOLVER ARRIBA
+   ============================================ */
+#back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #494c7d;
+    color: white;
+    border: 1px solid rgba(131,199,199,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    padding: 0;
+    margin: 0;
+}
+#back-to-top.visible,
+#back-to-top[style*='opacity: 1'] {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+#back-to-top:hover {
+    background: rgb(11, 10, 46);
+    border-color: #494c7d;
+    transform: translateY(-3px);
+}

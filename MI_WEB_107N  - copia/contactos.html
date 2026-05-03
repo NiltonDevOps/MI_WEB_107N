@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — Root Academy</title>
+ 
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/estyle.css">
+ 
+    <!-- Google Fonts (URL corregida) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header class="header__container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/logomarca.png" alt="Logo Root Academy">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="modulosaprendizaje.html">Módulos</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+            <button onclick="location.href='contactos.html'">Contáctanos</button>
+        </nav>
+    </header>
+ 
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <div class="main__container">
+ 
+        <h1>Contacto</h1>
+        <hr>
+ 
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <h2>Información de Contacto</h2>
+ 
+        <div class="contact__info">
+            <p>📧 <b>Correo:</b> rootacademy@gmail.com</p>
+            <p>📞 <b>Teléfono:</b> +51 987 654 321</p>
+            <p>📍 <b>Dirección:</b> Arequipa, Perú</p>
+        </div>
+ 
+        <hr>
+ 
+        <!-- FORMULARIO -->
+        <h2>Envíanos un mensaje</h2>
+ 
+        <!-- action="" debe apuntar a tu backend cuando lo tengas -->
+        <form class="form__container" action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+ 
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" required>
+ 
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Tu número">
+ 
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+ 
+            <input type="submit" value="Enviar mensaje">
+        </form>
+ 
+    </div>
+
+    <footer style="text-align:center; padding:20px; color:rgba(255,255,255,0.4); font-size:0.8em; border-top:1px solid rgba(131,199,199,0.15); margin-top:40px;">
+    © 2025 Root Academy · Todos los derechos reservados
+</footer>
+
+ <script src="js/main.js"></script>
+
+</body>
+</html>
